@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 
 const App = () => {
   window.navigator.geolocation.getCurrentPosition(
@@ -7,8 +7,15 @@ const App = () => {
     (err) => console.log(err),
   );
 
-  return <div>Hi there</div>
+  return <div>Latitude: </div>
 };
+
+
+class App extends React.Component {
+  render() {
+    return <div> Latitude: </div>;
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
