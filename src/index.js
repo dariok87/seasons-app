@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 
 class App extends React.Component {
+  constructor() {
+    
+  }
   render() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => console.log(position),
@@ -18,4 +21,4 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
-)
+);
