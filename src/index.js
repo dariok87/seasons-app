@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 
 
 class App extends React.Component {
-  constructor() {
-    
+  constructor(props) {
+    super(props);
+
+    this.state = {}; //initialize state object
   }
+
   render() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => console.log(position),
