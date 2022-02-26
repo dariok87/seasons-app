@@ -6,15 +6,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { latitude: 40 }; //initialize state object
-  }
+    this.state = { latitude: null }; //initialize state object
 
-  render() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => console.log(position),
       (err) => console.log(err)
     );
-  
+  }
+
+  render() {
     return <div> Latitude: {this.state.latitude}</div>;
   }
 }
