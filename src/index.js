@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {}; //initialize state object
+    this.state = { latitude: 40 }; //initialize state object
   }
 
   render() {
@@ -15,12 +15,12 @@ class App extends React.Component {
       (err) => console.log(err)
     );
   
-    return <div> Latitude: </div>;
+    return <div> Latitude: {this.state.latitude}</div>;
   }
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode>  
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
