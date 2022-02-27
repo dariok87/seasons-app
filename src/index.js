@@ -18,7 +18,7 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.latitude) {
-      return <SeasonDisplay latitude={this.state.latitude} />
+      return <SeasonDisplay latitude={this.state.latitude} /> // Passing state as a prop down to a child component
     }
 
     return <div>Loading...</div>
