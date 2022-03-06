@@ -22,7 +22,7 @@ class App extends React.Component {
       return <SeasonDisplay latitude={this.state.latitude} /> // Passing state as a prop down to a child component
     }
 
-    return <div><Spinner /></div>
+    return <Spinner message='Please accept location request'/>;
   }
 }
 
